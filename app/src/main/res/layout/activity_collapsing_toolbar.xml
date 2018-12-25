@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollapsingToolbarActivity"
+    app:layoutDescription="@xml/collapsing_toolbar_scene"
+    >
+
+
+    <ImageView
+        android:background="@color/colorPrimary"
+        android:id="@+id/full_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sampleimage" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_arrow_back"
+        android:tint="?android:attr/textColorPrimaryInverse"
+        app:layout_constraintStart_toStartOf="@+id/full_imageview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="SampleText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/full_imageview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/full_imageview" />
+
+</android.support.constraint.motion.MotionLayout>

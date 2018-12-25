@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationMenu"
+    app:layoutDescription="@xml/navigation_menu_scene">
+
+    <FrameLayout
+        android:id="@+id/backgroud_color"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary" />
+
+
+    <ImageView
+        android:tint="?android:attr/textColorPrimaryInverse"
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+/>
+
+    <ImageView
+        android:tint="?android:attr/textColorPrimaryInverse"
+        android:id="@+id/menu_button_open"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_dehaze" />
+
+    <TextView
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:id="@+id/menu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:textColor="?android:attr/textColorPrimaryInverse"
+        android:id="@+id/menu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroud_color">
+
+        <TextView
+            android:text="@string/lorem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.motion.MotionLayout>

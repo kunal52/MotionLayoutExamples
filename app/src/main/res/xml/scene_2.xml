@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition app:duration="50000"
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end">
+
+        <OnSwipe app:dragDirection="dragDown" />
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@id/test_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <CustomAttribute app:attributeName="scaleX"
+                app:customFloatValue="1"/>
+            <CustomAttribute app:attributeName="scaleY"
+                app:customFloatValue="1"/>
+
+        </Constraint>
+
+      <Constraint
+          android:id="@+id/test_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          app:layout_constraintTop_toBottomOf="@+id/test_imageview"/>
+
+
+        <Constraint
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+
+            >
+
+            <CustomAttribute app:attributeName="alpha"
+                app:customFloatValue="0"/>
+
+        </Constraint>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/test_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="parent"
+
+            >
+
+            <CustomAttribute app:attributeName="scaleX"
+                app:customFloatValue="1"/>
+            <CustomAttribute app:attributeName="scaleY"
+                app:customFloatValue="0.8"/>
+
+
+
+        </Constraint>
+
+
+        <Constraint
+            android:id="@id/test_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+
+        <Constraint
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <CustomAttribute app:attributeName="alpha"
+                app:customFloatValue="1"/>
+
+        </Constraint>
+
+
+    </ConstraintSet>
+
+</MotionScene>
